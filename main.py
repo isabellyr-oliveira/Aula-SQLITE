@@ -77,7 +77,7 @@ cursor = conexao.cursor()
 
 def deletar_aluno(id_aluno):
     try:
-        conexao sqlite.connect("escola.db")
+        conexao = sqlite3.connect("escola.db")
         cursor = conexao.cursor()
         
         cursor.execute("DELET FROM alunos WHERE id = ?", (id_aluno,))
